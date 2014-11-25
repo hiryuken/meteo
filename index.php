@@ -219,64 +219,44 @@ $i = rand(0,3)
 				</table> 
 			</div> -->
 				
-			<div id="next-days" class="center">
-				
-				<p>
+				<div id="next-days" class="center">
 
-					<table>
-						<tr>
-							<!--<td>
-								<ul>
-									
-									<br><br><br><br><br><br>
-									<li><strong>Temperatura MAX</strong></li>
-									<li><strong>Temperatura MIN</strong></li>
-									<li><strong>Velocit&agrave; del Vento</strong></li>
-									<li><strong>Direzione del Vento</strong></li>
-									<li><strong>Precipitazioni</strong></li>
-								</ul>
-							</td>-->
-						<?php
-							foreach ($data['data']['weather'] as $day) {	
-								$date = "<b>".strftime("%A", strtotime($day['date']))."</b>";
-								$date = $date.'<br />'.strftime("%d %B", strtotime($day['date']));
-								//$date = strftime("%A %d %B", strtotime($day['date']));
-								//$weatherIconUrl = '<img src="'.$day['weatherIconUrl'][0]['value'].'"/>';
-								$weatherIconUrl = '<img src="icons/'.$day['weatherCode'].'.png'.'" style="width:80px"/>';
-		
-								$weatherDesc = $weatherCode[$day['weatherCode']];
-								$tempMaxC = $day['tempMaxC'].'°C';
-								$thMax = therm($day['tempMaxC']);
-								//$tempMaxF = $day['tempMaxF'].'°F';
-								$tempMinC = $day['tempMinC'].'°C';
-								$thMin = therm($day['tempMinC']);
-								//$tempMinF = $day['tempMinF'].'°F';
-								$windspeedKmph = $day['windspeedKmph'].' Km/h';
-								$winddir16Point = $day['winddir16Point'];
-								$precipMM = $day['precipMM'].' mm';
-						?>		
-							<td>
-								<ul>
-									
-									<li><?=$date?></li>
-									<li><?=$weatherIconUrl?></li>
-									<!-- <li><?=$weatherDesc?></li> -->
-									<li><?=$tempMaxC?><!--<img src="images/<?=$thMax?>" style="width:25px;height:25px;"/></li>-->
-									<li><?=$tempMinC?><!--<img src="images/<?=$thMin?>" style="width:25px;height:25px;"/></li>-->
-									<li><?=$windspeedKmph?></li>
-									<li><?=$winddir16Point?></li>
-									<li><?=$precipMM?></li>
-								</ul>
-							</td>
-							
-						<?php
-							}	
-						?>  
-						</tr>
-					</table>
-				</p>
+				<?php
+					foreach ($data['data']['weather'] as $day) {	
+						$date = "<b>".strftime("%A", strtotime($day['date']))."</b>";
+						$date = $date.'<br />'.strftime("%d %B", strtotime($day['date']));
+						//$date = strftime("%A %d %B", strtotime($day['date']));
+						//$weatherIconUrl = '<img src="'.$day['weatherIconUrl'][0]['value'].'"/>';
+						$weatherIconUrl = '<img src="icons/'.$day['weatherCode'].'.png'.'" style="width:80px"/>';
+
+						$weatherDesc = $weatherCode[$day['weatherCode']];
+						$tempMaxC = $day['tempMaxC'].'°C';
+						$thMax = therm($day['tempMaxC']);
+						//$tempMaxF = $day['tempMaxF'].'°F';
+						$tempMinC = $day['tempMinC'].'°C';
+						$thMin = therm($day['tempMinC']);
+						//$tempMinF = $day['tempMinF'].'°F';
+						$windspeedKmph = $day['windspeedKmph'].' Km/h';
+						$winddir16Point = $day['winddir16Point'];
+						$precipMM = $day['precipMM'].' mm';
+				?>		
+					<div style="float:left;width:20%">
+						<p><?=$date?></p>
+						<p><?=$weatherIconUrl?></p>
+						<!-- <p><?=$weatherDesc?></p> -->
+						<p><?=$tempMaxC?></p><!--<img src="images/<?=$thMax?>" style="width:25px;height:25px;"/></p>-->
+						<p><?=$tempMinC?></p><!--<img src="images/<?=$thMin?>" style="width:25px;height:25px;"/></p>-->
+						<p><?=$windspeedKmph?></p>
+						<p><?=$winddir16Point?></p>
+						<p><?=$precipMM?></p>
+					</div>
+				<?php
+					}	
+				?>  
+
 			</div>
-		<!--</div> contents -->
+				
+		</div> <!--contents -->
 	</body>
 </html>
 
