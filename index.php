@@ -1,4 +1,4 @@
-<html>
+<html lang="it-IT">
 <?php
 setlocale(LC_TIME, 'ita', 'it_IT');
 $no_search = empty($_GET);
@@ -144,7 +144,9 @@ $i = rand(0,3)
 ?>
 
 	<head>
-		<meta charset="UTF-8">
+		<!-- <meta charset="UTF-8"> -->
+		<!-- <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> -->
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<title>Condizioni atmosferiche per: <?=$query?></title>
 	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
@@ -164,7 +166,7 @@ $i = rand(0,3)
 			<br />
 			<div id="current-condition" class="center">
 				<div>
-					<div style="float: left; text-align: left;width:40%;">
+					<div style="float: left; text-align: left;">
 						<ul>
 							<li>Vento: <strong><?=$windspeedKmph?> da <?=$winddir16Point?></strong></li>
 							<li>Pressione Atmosferica: <strong><?=$pressure?></strong></li>
@@ -239,7 +241,9 @@ $i = rand(0,3)
 								$date = "<b>".strftime("%A", strtotime($day['date']))."</b>";
 								$date = $date.'<br />'.strftime("%d %B", strtotime($day['date']));
 								//$date = strftime("%A %d %B", strtotime($day['date']));
-								$weatherIconUrl = '<img src="'.$day['weatherIconUrl'][0]['value'].'"/>';
+								//$weatherIconUrl = '<img src="'.$day['weatherIconUrl'][0]['value'].'"/>';
+								$weatherIconUrl = '<img src="icons/'.$day['weatherCode'].'.png'.'" style="width:80px"/>';
+		
 								$weatherDesc = $weatherCode[$day['weatherCode']];
 								$tempMaxC = $day['tempMaxC'].'°C';
 								$thMax = therm($day['tempMaxC']);
