@@ -166,12 +166,12 @@ $i = rand(0,3)
 				<div>
 					<div style="float: left; text-align: left;width:40%;">
 						<ul>
-						<li>Vento: <strong><?=$windspeedKmph?> da <?=$winddir16Point?></strong></li>
-						<li>Pressione Atmosferica: <strong><?=$pressure?></strong></li>
-						<li>Umidit&agrave;: <strong><?=$humidity?></strong></li>
-						<li>Copertura Nuvolosa: <strong><?=$cloudcover?></strong></li>
-
-
+							<li>Vento: <strong><?=$windspeedKmph?> da <?=$winddir16Point?></strong></li>
+							<li>Pressione Atmosferica: <strong><?=$pressure?></strong></li>
+							<li>Umidit&agrave;: <strong><?=$humidity?></strong></li>
+							<li>Copertura Nuvolosa: <strong><?=$cloudcover?></strong></li>
+							<li>Visibilit&agrave;<strong> <?=$visibility?></strong></li>
+							<li>Precipitazioni <strong> <?=$precipMM?></strong></li>
 						</ul>
 					</div>
 					<div style="float: left;">
@@ -191,7 +191,7 @@ $i = rand(0,3)
 				</div>
 			</div>
 			<br />
-			<div class="center">
+		<!-- 	<div class="center">
 				<table>
 					<tr>
 						<td><?=$weatherIconUrl?></td>
@@ -215,7 +215,7 @@ $i = rand(0,3)
 						<td><strong>Pressione Atmosferica </strong><?=$pressure?></td>
 					</tr>
 				</table> 
-			</div>
+			</div> -->
 				
 			<div id="next-days" class="center">
 				
