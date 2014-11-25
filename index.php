@@ -145,8 +145,8 @@ $i = rand(0,3)
 
 	<head>
 		<!-- <meta charset="UTF-8"> -->
-		<!-- <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> -->
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+		<!-- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> -->
 		<title>Condizioni atmosferiche per: <?=$query?></title>
 	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
